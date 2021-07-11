@@ -1,0 +1,12 @@
+# GraphQLのエンドポイント
+schema: http://localhost:8080/v1/graphql
+# GraphQLドキュメントをエクスポートするファイルのパス
+documents: ./src/**/*.graphql
+# key：生成されたコードの出力パス
+# value:その特定のファイルに関するオプションのセットを表すマップ
+generates:
+  ./src/types.ts: # 出力先のパス
+    plugins: # ファイル生成の際に使用するプラグイン
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
