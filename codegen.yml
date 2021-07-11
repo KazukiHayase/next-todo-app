@@ -5,7 +5,7 @@ documents: ./src/**/*.graphql
 # key：生成されたコードの出力パス
 # value:その特定のファイルに関するオプションのセットを表すマップ
 generates:
-  ./src/types.ts: # 出力先のパス
+  ./src/graphql/types.ts: # 出力先のパス
     plugins: # ファイル生成の際に使用するプラグイン
       - typescript
       - typescript-operations
