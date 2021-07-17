@@ -8,20 +8,28 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials"
   ],
-  // See also: https://storybook.js.org/docs/react/configure/webpack#extending-storybooks-webpack-config
-  webpackFinal: async (config, { configType }) => {
-    // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
-    // You can change the configuration based on that.
-    // 'PRODUCTION' is used when building the static version of storybook.
-
-    // Make whatever fine-grained changes you need
+  // See also: https://github.com/storybookjs/storybook/issues/2320
+  webpackFinal: async (config, { mode }) => {
     config.module.rules.push({
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-      include: path.resolve(__dirname, '../'),
-    });
+        test: /\.scss$/,
+        loaders: [
+            require.resolve('style-loader'),
+            {
+                loader: require.resolve('css-loader'),
+                options: {
+                    importLoaders: 1,
+                    modules: {
+                        mode: 'local',
+                        localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                        context: path.resolve(__dirname, 'src'),
+                        hashPrefix: 'my-custom-hash',
+                    },
+                },
+            },
+            require.resolve('sass-loader')
+        ],
+    })
 
-    // Return the altered config
     return config;
   },
 }
