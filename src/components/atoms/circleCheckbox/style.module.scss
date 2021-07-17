@@ -1,0 +1,13 @@
+.checkbox {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  margin-right: 15px;
+  border-color: gray;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+}
