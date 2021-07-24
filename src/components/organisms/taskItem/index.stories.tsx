@@ -1,15 +1,15 @@
 import React, { ComponentProps, useCallback, useEffect, useState } from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { TodoItem, Props } from './index';
+import { TaskItem, Props } from './index';
 
 export default {
-  title: 'Organisms/TodoItem',
-  component: TodoItem
+  title: 'Organisms/TaskItem',
+  component: TaskItem
 } as Meta;
 
 const Template: Story<Props> = (args) => (
-  <TodoItem {...args} />
+  <TaskItem {...args} />
 )
 
 export const Default = Template.bind({});
-Default.args = {todo: {id: 1, title: 'テストテスト', isDone: false}};
+Default.args = {task: {id: 1, title: 'テストテスト', isDone: false}};

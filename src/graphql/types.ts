@@ -77,60 +77,60 @@ export type StringComparisonExp = {
 /** mutation root */
 export type MutationRoot = {
   __typename?: 'mutation_root';
-  /** delete data from the table: "todos" */
-  delete_todos?: Maybe<TodosMutationResponse>;
-  /** delete single row from the table: "todos" */
-  delete_todos_by_pk?: Maybe<Todos>;
-  /** insert data into the table: "todos" */
-  insert_todos?: Maybe<TodosMutationResponse>;
-  /** insert a single row into the table: "todos" */
-  insert_todos_one?: Maybe<Todos>;
-  /** update data of the table: "todos" */
-  update_todos?: Maybe<TodosMutationResponse>;
-  /** update single row of the table: "todos" */
-  update_todos_by_pk?: Maybe<Todos>;
+  /** delete data from the table: "tasks" */
+  delete_tasks?: Maybe<TasksMutationResponse>;
+  /** delete single row from the table: "tasks" */
+  delete_tasks_by_pk?: Maybe<Tasks>;
+  /** insert data into the table: "tasks" */
+  insert_tasks?: Maybe<TasksMutationResponse>;
+  /** insert a single row into the table: "tasks" */
+  insert_tasks_one?: Maybe<Tasks>;
+  /** update data of the table: "tasks" */
+  update_tasks?: Maybe<TasksMutationResponse>;
+  /** update single row of the table: "tasks" */
+  update_tasks_by_pk?: Maybe<Tasks>;
 };
 
 
 /** mutation root */
-export type MutationRootDeleteTodosArgs = {
-  where: TodosBoolExp;
+export type MutationRootDeleteTasksArgs = {
+  where: TasksBoolExp;
 };
 
 
 /** mutation root */
-export type MutationRootDeleteTodosByPkArgs = {
+export type MutationRootDeleteTasksByPkArgs = {
   id: Scalars['Int'];
 };
 
 
 /** mutation root */
-export type MutationRootInsertTodosArgs = {
-  objects: Array<TodosInsertInput>;
-  on_conflict?: Maybe<TodosOnConflict>;
+export type MutationRootInsertTasksArgs = {
+  objects: Array<TasksInsertInput>;
+  on_conflict?: Maybe<TasksOnConflict>;
 };
 
 
 /** mutation root */
-export type MutationRootInsertTodosOneArgs = {
-  object: TodosInsertInput;
-  on_conflict?: Maybe<TodosOnConflict>;
+export type MutationRootInsertTasksOneArgs = {
+  object: TasksInsertInput;
+  on_conflict?: Maybe<TasksOnConflict>;
 };
 
 
 /** mutation root */
-export type MutationRootUpdateTodosArgs = {
-  _inc?: Maybe<TodosIncInput>;
-  _set?: Maybe<TodosSetInput>;
-  where: TodosBoolExp;
+export type MutationRootUpdateTasksArgs = {
+  _inc?: Maybe<TasksIncInput>;
+  _set?: Maybe<TasksSetInput>;
+  where: TasksBoolExp;
 };
 
 
 /** mutation root */
-export type MutationRootUpdateTodosByPkArgs = {
-  _inc?: Maybe<TodosIncInput>;
-  _set?: Maybe<TodosSetInput>;
-  pk_columns: TodosPkColumnsInput;
+export type MutationRootUpdateTasksByPkArgs = {
+  _inc?: Maybe<TasksIncInput>;
+  _set?: Maybe<TasksSetInput>;
+  pk_columns: TasksPkColumnsInput;
 };
 
 /** column ordering options */
@@ -151,186 +151,186 @@ export enum OrderBy {
 
 export type QueryRoot = {
   __typename?: 'query_root';
-  /** fetch data from the table: "todos" */
-  todos: Array<Todos>;
-  /** fetch aggregated fields from the table: "todos" */
-  todos_aggregate: TodosAggregate;
-  /** fetch data from the table: "todos" using primary key columns */
-  todos_by_pk?: Maybe<Todos>;
+  /** fetch data from the table: "tasks" */
+  tasks: Array<Tasks>;
+  /** fetch aggregated fields from the table: "tasks" */
+  tasks_aggregate: TasksAggregate;
+  /** fetch data from the table: "tasks" using primary key columns */
+  tasks_by_pk?: Maybe<Tasks>;
 };
 
 
-export type QueryRootTodosArgs = {
-  distinct_on?: Maybe<Array<TodosSelectColumn>>;
+export type QueryRootTasksArgs = {
+  distinct_on?: Maybe<Array<TasksSelectColumn>>;
   limit?: Maybe<Scalars['Int']>;
   offset?: Maybe<Scalars['Int']>;
-  order_by?: Maybe<Array<TodosOrderBy>>;
-  where?: Maybe<TodosBoolExp>;
+  order_by?: Maybe<Array<TasksOrderBy>>;
+  where?: Maybe<TasksBoolExp>;
 };
 
 
-export type QueryRootTodosAggregateArgs = {
-  distinct_on?: Maybe<Array<TodosSelectColumn>>;
+export type QueryRootTasksAggregateArgs = {
+  distinct_on?: Maybe<Array<TasksSelectColumn>>;
   limit?: Maybe<Scalars['Int']>;
   offset?: Maybe<Scalars['Int']>;
-  order_by?: Maybe<Array<TodosOrderBy>>;
-  where?: Maybe<TodosBoolExp>;
+  order_by?: Maybe<Array<TasksOrderBy>>;
+  where?: Maybe<TasksBoolExp>;
 };
 
 
-export type QueryRootTodosByPkArgs = {
+export type QueryRootTasksByPkArgs = {
   id: Scalars['Int'];
 };
 
 export type SubscriptionRoot = {
   __typename?: 'subscription_root';
-  /** fetch data from the table: "todos" */
-  todos: Array<Todos>;
-  /** fetch aggregated fields from the table: "todos" */
-  todos_aggregate: TodosAggregate;
-  /** fetch data from the table: "todos" using primary key columns */
-  todos_by_pk?: Maybe<Todos>;
+  /** fetch data from the table: "tasks" */
+  tasks: Array<Tasks>;
+  /** fetch aggregated fields from the table: "tasks" */
+  tasks_aggregate: TasksAggregate;
+  /** fetch data from the table: "tasks" using primary key columns */
+  tasks_by_pk?: Maybe<Tasks>;
 };
 
 
-export type SubscriptionRootTodosArgs = {
-  distinct_on?: Maybe<Array<TodosSelectColumn>>;
+export type SubscriptionRootTasksArgs = {
+  distinct_on?: Maybe<Array<TasksSelectColumn>>;
   limit?: Maybe<Scalars['Int']>;
   offset?: Maybe<Scalars['Int']>;
-  order_by?: Maybe<Array<TodosOrderBy>>;
-  where?: Maybe<TodosBoolExp>;
+  order_by?: Maybe<Array<TasksOrderBy>>;
+  where?: Maybe<TasksBoolExp>;
 };
 
 
-export type SubscriptionRootTodosAggregateArgs = {
-  distinct_on?: Maybe<Array<TodosSelectColumn>>;
+export type SubscriptionRootTasksAggregateArgs = {
+  distinct_on?: Maybe<Array<TasksSelectColumn>>;
   limit?: Maybe<Scalars['Int']>;
   offset?: Maybe<Scalars['Int']>;
-  order_by?: Maybe<Array<TodosOrderBy>>;
-  where?: Maybe<TodosBoolExp>;
+  order_by?: Maybe<Array<TasksOrderBy>>;
+  where?: Maybe<TasksBoolExp>;
 };
 
 
-export type SubscriptionRootTodosByPkArgs = {
+export type SubscriptionRootTasksByPkArgs = {
   id: Scalars['Int'];
 };
 
-/** columns and relationships of "todos" */
-export type Todos = {
-  __typename?: 'todos';
+/** columns and relationships of "tasks" */
+export type Tasks = {
+  __typename?: 'tasks';
   id: Scalars['Int'];
   isDone: Scalars['Boolean'];
   title: Scalars['String'];
 };
 
-/** aggregated selection of "todos" */
-export type TodosAggregate = {
-  __typename?: 'todos_aggregate';
-  aggregate?: Maybe<TodosAggregateFields>;
-  nodes: Array<Todos>;
+/** aggregated selection of "tasks" */
+export type TasksAggregate = {
+  __typename?: 'tasks_aggregate';
+  aggregate?: Maybe<TasksAggregateFields>;
+  nodes: Array<Tasks>;
 };
 
-/** aggregate fields of "todos" */
-export type TodosAggregateFields = {
-  __typename?: 'todos_aggregate_fields';
-  avg?: Maybe<TodosAvgFields>;
+/** aggregate fields of "tasks" */
+export type TasksAggregateFields = {
+  __typename?: 'tasks_aggregate_fields';
+  avg?: Maybe<TasksAvgFields>;
   count: Scalars['Int'];
-  max?: Maybe<TodosMaxFields>;
-  min?: Maybe<TodosMinFields>;
-  stddev?: Maybe<TodosStddevFields>;
-  stddev_pop?: Maybe<TodosStddevPopFields>;
-  stddev_samp?: Maybe<TodosStddevSampFields>;
-  sum?: Maybe<TodosSumFields>;
-  var_pop?: Maybe<TodosVarPopFields>;
-  var_samp?: Maybe<TodosVarSampFields>;
-  variance?: Maybe<TodosVarianceFields>;
+  max?: Maybe<TasksMaxFields>;
+  min?: Maybe<TasksMinFields>;
+  stddev?: Maybe<TasksStddevFields>;
+  stddev_pop?: Maybe<TasksStddevPopFields>;
+  stddev_samp?: Maybe<TasksStddevSampFields>;
+  sum?: Maybe<TasksSumFields>;
+  var_pop?: Maybe<TasksVarPopFields>;
+  var_samp?: Maybe<TasksVarSampFields>;
+  variance?: Maybe<TasksVarianceFields>;
 };
 
 
-/** aggregate fields of "todos" */
-export type TodosAggregateFieldsCountArgs = {
-  columns?: Maybe<Array<TodosSelectColumn>>;
+/** aggregate fields of "tasks" */
+export type TasksAggregateFieldsCountArgs = {
+  columns?: Maybe<Array<TasksSelectColumn>>;
   distinct?: Maybe<Scalars['Boolean']>;
 };
 
 /** aggregate avg on columns */
-export type TodosAvgFields = {
-  __typename?: 'todos_avg_fields';
+export type TasksAvgFields = {
+  __typename?: 'tasks_avg_fields';
   id?: Maybe<Scalars['Float']>;
 };
 
-/** Boolean expression to filter rows from the table "todos". All fields are combined with a logical 'AND'. */
-export type TodosBoolExp = {
-  _and?: Maybe<Array<TodosBoolExp>>;
-  _not?: Maybe<TodosBoolExp>;
-  _or?: Maybe<Array<TodosBoolExp>>;
+/** Boolean expression to filter rows from the table "tasks". All fields are combined with a logical 'AND'. */
+export type TasksBoolExp = {
+  _and?: Maybe<Array<TasksBoolExp>>;
+  _not?: Maybe<TasksBoolExp>;
+  _or?: Maybe<Array<TasksBoolExp>>;
   id?: Maybe<IntComparisonExp>;
   isDone?: Maybe<BooleanComparisonExp>;
   title?: Maybe<StringComparisonExp>;
 };
 
-/** unique or primary key constraints on table "todos" */
-export enum TodosConstraint {
+/** unique or primary key constraints on table "tasks" */
+export enum TasksConstraint {
   /** unique or primary key constraint */
   TodosPkey = 'todos_pkey'
 }
 
-/** input type for incrementing numeric columns in table "todos" */
-export type TodosIncInput = {
+/** input type for incrementing numeric columns in table "tasks" */
+export type TasksIncInput = {
   id?: Maybe<Scalars['Int']>;
 };
 
-/** input type for inserting data into table "todos" */
-export type TodosInsertInput = {
+/** input type for inserting data into table "tasks" */
+export type TasksInsertInput = {
   id?: Maybe<Scalars['Int']>;
   isDone?: Maybe<Scalars['Boolean']>;
   title?: Maybe<Scalars['String']>;
 };
 
 /** aggregate max on columns */
-export type TodosMaxFields = {
-  __typename?: 'todos_max_fields';
+export type TasksMaxFields = {
+  __typename?: 'tasks_max_fields';
   id?: Maybe<Scalars['Int']>;
   title?: Maybe<Scalars['String']>;
 };
 
 /** aggregate min on columns */
-export type TodosMinFields = {
-  __typename?: 'todos_min_fields';
+export type TasksMinFields = {
+  __typename?: 'tasks_min_fields';
   id?: Maybe<Scalars['Int']>;
   title?: Maybe<Scalars['String']>;
 };
 
-/** response of any mutation on the table "todos" */
-export type TodosMutationResponse = {
-  __typename?: 'todos_mutation_response';
+/** response of any mutation on the table "tasks" */
+export type TasksMutationResponse = {
+  __typename?: 'tasks_mutation_response';
   /** number of rows affected by the mutation */
   affected_rows: Scalars['Int'];
   /** data from the rows affected by the mutation */
-  returning: Array<Todos>;
+  returning: Array<Tasks>;
 };
 
-/** on conflict condition type for table "todos" */
-export type TodosOnConflict = {
-  constraint: TodosConstraint;
-  update_columns?: Array<TodosUpdateColumn>;
-  where?: Maybe<TodosBoolExp>;
+/** on conflict condition type for table "tasks" */
+export type TasksOnConflict = {
+  constraint: TasksConstraint;
+  update_columns?: Array<TasksUpdateColumn>;
+  where?: Maybe<TasksBoolExp>;
 };
 
-/** Ordering options when selecting data from "todos". */
-export type TodosOrderBy = {
+/** Ordering options when selecting data from "tasks". */
+export type TasksOrderBy = {
   id?: Maybe<OrderBy>;
   isDone?: Maybe<OrderBy>;
   title?: Maybe<OrderBy>;
 };
 
-/** primary key columns input for table: todos */
-export type TodosPkColumnsInput = {
+/** primary key columns input for table: tasks */
+export type TasksPkColumnsInput = {
   id: Scalars['Int'];
 };
 
-/** select columns of table "todos" */
-export enum TodosSelectColumn {
+/** select columns of table "tasks" */
+export enum TasksSelectColumn {
   /** column name */
   Id = 'id',
   /** column name */
@@ -339,39 +339,39 @@ export enum TodosSelectColumn {
   Title = 'title'
 }
 
-/** input type for updating data in table "todos" */
-export type TodosSetInput = {
+/** input type for updating data in table "tasks" */
+export type TasksSetInput = {
   id?: Maybe<Scalars['Int']>;
   isDone?: Maybe<Scalars['Boolean']>;
   title?: Maybe<Scalars['String']>;
 };
 
 /** aggregate stddev on columns */
-export type TodosStddevFields = {
-  __typename?: 'todos_stddev_fields';
+export type TasksStddevFields = {
+  __typename?: 'tasks_stddev_fields';
   id?: Maybe<Scalars['Float']>;
 };
 
 /** aggregate stddev_pop on columns */
-export type TodosStddevPopFields = {
-  __typename?: 'todos_stddev_pop_fields';
+export type TasksStddevPopFields = {
+  __typename?: 'tasks_stddev_pop_fields';
   id?: Maybe<Scalars['Float']>;
 };
 
 /** aggregate stddev_samp on columns */
-export type TodosStddevSampFields = {
-  __typename?: 'todos_stddev_samp_fields';
+export type TasksStddevSampFields = {
+  __typename?: 'tasks_stddev_samp_fields';
   id?: Maybe<Scalars['Float']>;
 };
 
 /** aggregate sum on columns */
-export type TodosSumFields = {
-  __typename?: 'todos_sum_fields';
+export type TasksSumFields = {
+  __typename?: 'tasks_sum_fields';
   id?: Maybe<Scalars['Int']>;
 };
 
-/** update columns of table "todos" */
-export enum TodosUpdateColumn {
+/** update columns of table "tasks" */
+export enum TasksUpdateColumn {
   /** column name */
   Id = 'id',
   /** column name */
@@ -381,69 +381,69 @@ export enum TodosUpdateColumn {
 }
 
 /** aggregate var_pop on columns */
-export type TodosVarPopFields = {
-  __typename?: 'todos_var_pop_fields';
+export type TasksVarPopFields = {
+  __typename?: 'tasks_var_pop_fields';
   id?: Maybe<Scalars['Float']>;
 };
 
 /** aggregate var_samp on columns */
-export type TodosVarSampFields = {
-  __typename?: 'todos_var_samp_fields';
+export type TasksVarSampFields = {
+  __typename?: 'tasks_var_samp_fields';
   id?: Maybe<Scalars['Float']>;
 };
 
 /** aggregate variance on columns */
-export type TodosVarianceFields = {
-  __typename?: 'todos_variance_fields';
+export type TasksVarianceFields = {
+  __typename?: 'tasks_variance_fields';
   id?: Maybe<Scalars['Float']>;
 };
 
-export type UpdateTodoMutationMutationVariables = Exact<{
+export type UpdateTaskMutationMutationVariables = Exact<{
   id: Scalars['Int'];
   isDone?: Maybe<Scalars['Boolean']>;
 }>;
 
 
-export type UpdateTodoMutationMutation = (
+export type UpdateTaskMutationMutation = (
   { __typename?: 'mutation_root' }
-  & { update_todos_by_pk?: Maybe<(
-    { __typename?: 'todos' }
-    & Pick<Todos, 'isDone'>
+  & { update_tasks_by_pk?: Maybe<(
+    { __typename?: 'tasks' }
+    & Pick<Tasks, 'isDone'>
   )> }
 );
 
 
-export const UpdateTodoMutationDocument = gql`
-    mutation UpdateTodoMutation($id: Int!, $isDone: Boolean) {
-  update_todos_by_pk(pk_columns: {id: $id}, _set: {isDone: $isDone}) {
+export const UpdateTaskMutationDocument = gql`
+    mutation UpdateTaskMutation($id: Int!, $isDone: Boolean) {
+  update_tasks_by_pk(pk_columns: {id: $id}, _set: {isDone: $isDone}) {
     isDone
   }
 }
     `;
-export type UpdateTodoMutationMutationFn = Apollo.MutationFunction<UpdateTodoMutationMutation, UpdateTodoMutationMutationVariables>;
+export type UpdateTaskMutationMutationFn = Apollo.MutationFunction<UpdateTaskMutationMutation, UpdateTaskMutationMutationVariables>;
 
 /**
- * __useUpdateTodoMutationMutation__
+ * __useUpdateTaskMutationMutation__
  *
- * To run a mutation, you first call `useUpdateTodoMutationMutation` within a React component and pass it any options that fit your needs.
- * When your component renders, `useUpdateTodoMutationMutation` returns a tuple that includes:
+ * To run a mutation, you first call `useUpdateTaskMutationMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateTaskMutationMutation` returns a tuple that includes:
  * - A mutate function that you can call at any time to execute the mutation
  * - An object with fields that represent the current status of the mutation's execution
  *
  * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
  *
  * @example
- * const [updateTodoMutationMutation, { data, loading, error }] = useUpdateTodoMutationMutation({
+ * const [updateTaskMutationMutation, { data, loading, error }] = useUpdateTaskMutationMutation({
  *   variables: {
  *      id: // value for 'id'
  *      isDone: // value for 'isDone'
  *   },
  * });
  */
-export function useUpdateTodoMutationMutation(baseOptions?: Apollo.MutationHookOptions<UpdateTodoMutationMutation, UpdateTodoMutationMutationVariables>) {
+export function useUpdateTaskMutationMutation(baseOptions?: Apollo.MutationHookOptions<UpdateTaskMutationMutation, UpdateTaskMutationMutationVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useMutation<UpdateTodoMutationMutation, UpdateTodoMutationMutationVariables>(UpdateTodoMutationDocument, options);
+        return Apollo.useMutation<UpdateTaskMutationMutation, UpdateTaskMutationMutationVariables>(UpdateTaskMutationDocument, options);
       }
-export type UpdateTodoMutationMutationHookResult = ReturnType<typeof useUpdateTodoMutationMutation>;
-export type UpdateTodoMutationMutationResult = Apollo.MutationResult<UpdateTodoMutationMutation>;
-export type UpdateTodoMutationMutationOptions = Apollo.BaseMutationOptions<UpdateTodoMutationMutation, UpdateTodoMutationMutationVariables>;
+export type UpdateTaskMutationMutationHookResult = ReturnType<typeof useUpdateTaskMutationMutation>;
+export type UpdateTaskMutationMutationResult = Apollo.MutationResult<UpdateTaskMutationMutation>;
+export type UpdateTaskMutationMutationOptions = Apollo.BaseMutationOptions<UpdateTaskMutationMutation, UpdateTaskMutationMutationVariables>;

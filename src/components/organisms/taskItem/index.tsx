@@ -1,26 +1,26 @@
 import { Checkbox } from '../../atoms/checkbox';
-import { Todos as ITodo, useUpdateTodoMutationMutation } from '../../../graphql/types';
+import { Tasks as ITask, useUpdateTaskMutationMutation } from '../../../graphql/types';
 import style from './style.module.scss';
 import { useState } from 'react';
 
 export interface Props {
-  todo: ITodo;
+  task: ITask;
 }
 
-export const TodoItem: React.VFC<Props> = ({
-  todo
+export const TaskItem: React.VFC<Props> = ({
+  task
 }) => {
-  const [isDone, setIsDone] = useState<boolean>(todo.isDone)
-  const [updateTodoMutationMutation, { error }] = useUpdateTodoMutationMutation({
+  const [isDone, setIsDone] = useState<boolean>(task.isDone)
+  const [updateTaskMutationMutation, { error }] = useUpdateTaskMutationMutation({
     variables: {
-       id: todo.id,
+       id: task.id,
        isDone: isDone
     }
   });
   // TODO: useCallback使うべきか調査
   const handleChange = (isDone: boolean) => {
     setIsDone(isDone);
-    updateTodoMutationMutation(); // mutation発行
+    updateTaskMutationMutation(); // mutation発行
   }
 
   if (error) {
@@ -30,14 +30,14 @@ export const TodoItem: React.VFC<Props> = ({
   return (
     <li
       className={[
-        style.todoItem,
+        style.taskItem,
         isDone ? style.done : ''
       ].join(' ')}
     >
       <Checkbox
         onChange={(e) => handleChange(e.target.checked)}
         isChecked={isDone}
-        label={todo.title}
+        label={task.title}
       />
     </li>
   )
