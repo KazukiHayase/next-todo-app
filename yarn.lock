@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@apollo/client@^3.3.21":
+"@apollo/client@^3.3.21", "@apollo/client@>=2.0.0", "@apollo/client@latest":
   "integrity" "sha512-RAmZReFuKCKx0Rs5C0nVJwKomAHUHn+gGP/YvbEsXQWu0sXoncEUZa71UqlfCPVXa/0MkYOIbCXSQdOcuRrHgw=="
   "resolved" "https://registry.npmjs.org/@apollo/client/-/client-3.3.21.tgz"
   "version" "3.3.21"
@@ -20,6 +20,13 @@
     "ts-invariant" "^0.8.0"
     "tslib" "^1.10.0"
     "zen-observable" "^0.8.14"
+
+"@apollo/react-testing@>=3.0.0":
+  "integrity" "sha512-P7Z/flUHpRRZYc3FkIqxZH9XD3FuP2Sgks1IXqGq2Zb7qI0aaTfVeRsLYmZNUcFOh2pTHxs0NXgPnH1VfYOpig=="
+  "resolved" "https://registry.npmjs.org/@apollo/react-testing/-/react-testing-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "@apollo/client" "latest"
 
 "@ardatan/aggregate-error@0.0.6":
   "integrity" "sha512-vyrkEHG1jrukmzTPtyWB4NLPauUw5bQeg4uhn8f+1SSynmrOcyvlb1GKQjjgoBzElLdfXCRYX8UnBlhklOHYRQ=="
@@ -2137,7 +2144,7 @@
     "prop-types" "^15.7.2"
     "regenerator-runtime" "^0.13.7"
 
-"@storybook/addons@^6.3.0", "@storybook/addons@6.3.4":
+"@storybook/addons@^6", "@storybook/addons@^6.3.0", "@storybook/addons@6.3.4":
   "integrity" "sha512-rf8K8X3JrB43gq5nw5SYgfucQkFg2QgUMWdByf7dQ4MyIl5zet+2MYiSXJ9lfbhGKJZ8orc81rmMtiocW4oBjg=="
   "resolved" "https://registry.npmjs.org/@storybook/addons/-/addons-6.3.4.tgz"
   "version" "6.3.4"
@@ -2152,7 +2159,7 @@
     "global" "^4.4.0"
     "regenerator-runtime" "^0.13.7"
 
-"@storybook/api@^6.3.0", "@storybook/api@6.3.4":
+"@storybook/api@^6", "@storybook/api@^6.3.0", "@storybook/api@6.3.4":
   "integrity" "sha512-12q6dvSR4AtyuZbKAy3Xt+ZHzZ4ePPRV1q20xtgYBoiFEgB9vbh4XKEeeZD0yIeTamQ2x1Hn87R79Rs1GIdKRQ=="
   "resolved" "https://registry.npmjs.org/@storybook/api/-/api-6.3.4.tgz"
   "version" "6.3.4"
@@ -2370,7 +2377,7 @@
     "core-js" "^3.8.2"
     "global" "^4.4.0"
 
-"@storybook/components@^6.3.0", "@storybook/components@6.3.4":
+"@storybook/components@^6", "@storybook/components@^6.3.0", "@storybook/components@6.3.4":
   "integrity" "sha512-0hBKTkkQbW+daaA6nRedkviPr2bEzy1kwq0H5eaLKI1zYeXN3U5Z8fVhO137PPqH5LmLietrmTPkqiljUBk9ug=="
   "resolved" "https://registry.npmjs.org/@storybook/components/-/components-6.3.4.tgz"
   "version" "6.3.4"
@@ -7267,7 +7274,7 @@
   "resolved" "https://registry.npmjs.org/graphql-ws/-/graphql-ws-4.9.0.tgz"
   "version" "4.9.0"
 
-"graphql@^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^14.0.0 || ^15.0.0", "graphql@^15.0.0", "graphql@^15.5.1", "graphql@>=0.10.0", "graphql@>=0.11 <=15", "graphql@14.x || 15.x":
+"graphql@*", "graphql@^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^14.0.0 || ^15.0.0", "graphql@^15.0.0", "graphql@^15.5.1", "graphql@>=0.10.0", "graphql@>=0.11 <=15", "graphql@14.x || 15.x":
   "integrity" "sha512-FeTRX67T3LoE3LWAxxOlW2K3Bz+rMYAC18rRguK4wgXaTZMiJwSUwDmPFo3UadAKbzirKIg5Qy+sNJXbpPRnQw=="
   "resolved" "https://registry.npmjs.org/graphql/-/graphql-15.5.1.tgz"
   "version" "15.5.1"
@@ -11120,7 +11127,7 @@
     "use-composed-ref" "^1.0.0"
     "use-latest" "^1.0.0"
 
-"react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^0.14.0 || ^15.0.0-0 || ^16.0.0 || ^17.0.0", "react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1", "react@^16.13.1 || ^17.0.0", "react@^16.6.0 || ^17.0.0", "react@^16.8.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.8.4 || ^17.0.0", "react@^17.0.2", "react@>= 0.14.0", "react@>=16.12.0", "react@>=16.3.0", "react@>=16.8.0", "react@15.x || 16.x || 16.4.0-alpha.0911da3", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.2":
+"react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^0.14.0 || ^15.0.0-0 || ^16.0.0 || ^17.0.0", "react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1", "react@^16.13.1 || ^17.0.0", "react@^16.6.0 || ^17.0.0", "react@^16.8.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.8.4 || ^17.0.0", "react@^17.0.2", "react@>= 0.14.0", "react@>=16.12.0", "react@>=16.3.0", "react@>=16.8.0", "react@15.x || 16.x || 16.4.0-alpha.0911da3", "react@15.x.x || 16.x.x || 17.x.x", "react@16.x || 17.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -12384,6 +12391,18 @@
   "integrity" "sha512-7t+/wpKLanLzSnQPX8WAcuLCCeuSHoWdQuh9SB3xD0kNOM38DNf+0Oa+wmvxmYueRzkmh6IcdKFtvTa+ecgPDw=="
   "resolved" "https://registry.npmjs.org/store2/-/store2-2.12.0.tgz"
   "version" "2.12.0"
+
+"storybook-addon-apollo-client@^4.0.8":
+  "integrity" "sha512-EmsQkhAFPNEv2jDg8Dzlz7MpyyRzjyEfTH5Ckw8HP3G52JWZQHiJE+Dl5WDiszlKnPKo/ZwOCcQ336t4XCm6GQ=="
+  "resolved" "https://registry.npmjs.org/storybook-addon-apollo-client/-/storybook-addon-apollo-client-4.0.8.tgz"
+  "version" "4.0.8"
+  dependencies:
+    "@storybook/addons" "^6"
+    "@storybook/api" "^6"
+    "@storybook/components" "^6"
+  optionalDependencies:
+    "@apollo/client" ">=2.0.0"
+    "@apollo/react-testing" ">=3.0.0"
 
 "storybook-addon-outline@^1.4.1":
   "integrity" "sha512-Qvv9X86CoONbi+kYY78zQcTGmCgFaewYnOVR6WL7aOFJoW7TrLiIc/O4hH5X9PsEPZFqjfXEPUPENWVUQim6yw=="
