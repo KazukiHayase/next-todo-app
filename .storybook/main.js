@@ -11,6 +11,14 @@ module.exports = {
   ],
   // See also: https://github.com/storybookjs/storybook/issues/2320
   webpackFinal: async (config, { mode }) => {
+    // 絶対パス、パスエイリアスを解決できるように
+    // @see: https://github.com/storybookjs/storybook/issues/3916#issuecomment-664349094
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "src": path.resolve(__dirname, "../src"),
+      "@/components": path.resolve(__dirname, "../src/components"),
+    };
+
     config.module.rules.push({
         test: /\.scss$/,
         loaders: [

@@ -1,5 +1,5 @@
-import { Checkbox } from '../../atoms/checkbox';
-import { Tasks as ITask, useUpdateTaskMutationMutation } from '../../../graphql/types';
+import { Checkbox } from '@/components/atoms/checkbox';
+import { Tasks as ITask, useUpdateTaskMutationMutation } from 'src/graphql/types';
 import style from './style.module.scss';
 import { useState } from 'react';
 
