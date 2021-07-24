@@ -1,7 +1,7 @@
 # GraphQLのエンドポイント
 schema: http://localhost:8080/v1/graphql
 # GraphQLドキュメントをエクスポートするファイルのパス
-documents: ./src/**/*.graphql
+documents: ./src/**/*.gql
 # key：生成されたコードの出力パス
 # value:その特定のファイルに関するオプションのセットを表すマップ
 generates:
