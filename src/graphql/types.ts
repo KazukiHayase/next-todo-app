@@ -74,21 +74,219 @@ export type StringComparisonExp = {
   _similar?: Maybe<Scalars['String']>;
 };
 
+/** columns and relationships of "categories" */
+export type Categories = {
+  __typename?: 'categories';
+  id: Scalars['Int'];
+  name: Scalars['String'];
+};
+
+/** aggregated selection of "categories" */
+export type CategoriesAggregate = {
+  __typename?: 'categories_aggregate';
+  aggregate?: Maybe<CategoriesAggregateFields>;
+  nodes: Array<Categories>;
+};
+
+/** aggregate fields of "categories" */
+export type CategoriesAggregateFields = {
+  __typename?: 'categories_aggregate_fields';
+  avg?: Maybe<CategoriesAvgFields>;
+  count: Scalars['Int'];
+  max?: Maybe<CategoriesMaxFields>;
+  min?: Maybe<CategoriesMinFields>;
+  stddev?: Maybe<CategoriesStddevFields>;
+  stddev_pop?: Maybe<CategoriesStddevPopFields>;
+  stddev_samp?: Maybe<CategoriesStddevSampFields>;
+  sum?: Maybe<CategoriesSumFields>;
+  var_pop?: Maybe<CategoriesVarPopFields>;
+  var_samp?: Maybe<CategoriesVarSampFields>;
+  variance?: Maybe<CategoriesVarianceFields>;
+};
+
+
+/** aggregate fields of "categories" */
+export type CategoriesAggregateFieldsCountArgs = {
+  columns?: Maybe<Array<CategoriesSelectColumn>>;
+  distinct?: Maybe<Scalars['Boolean']>;
+};
+
+/** aggregate avg on columns */
+export type CategoriesAvgFields = {
+  __typename?: 'categories_avg_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** Boolean expression to filter rows from the table "categories". All fields are combined with a logical 'AND'. */
+export type CategoriesBoolExp = {
+  _and?: Maybe<Array<CategoriesBoolExp>>;
+  _not?: Maybe<CategoriesBoolExp>;
+  _or?: Maybe<Array<CategoriesBoolExp>>;
+  id?: Maybe<IntComparisonExp>;
+  name?: Maybe<StringComparisonExp>;
+};
+
+/** unique or primary key constraints on table "categories" */
+export enum CategoriesConstraint {
+  /** unique or primary key constraint */
+  CategoriesPkey = 'categories_pkey'
+}
+
+/** input type for incrementing numeric columns in table "categories" */
+export type CategoriesIncInput = {
+  id?: Maybe<Scalars['Int']>;
+};
+
+/** input type for inserting data into table "categories" */
+export type CategoriesInsertInput = {
+  id?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+};
+
+/** aggregate max on columns */
+export type CategoriesMaxFields = {
+  __typename?: 'categories_max_fields';
+  id?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+};
+
+/** aggregate min on columns */
+export type CategoriesMinFields = {
+  __typename?: 'categories_min_fields';
+  id?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+};
+
+/** response of any mutation on the table "categories" */
+export type CategoriesMutationResponse = {
+  __typename?: 'categories_mutation_response';
+  /** number of rows affected by the mutation */
+  affected_rows: Scalars['Int'];
+  /** data from the rows affected by the mutation */
+  returning: Array<Categories>;
+};
+
+/** on conflict condition type for table "categories" */
+export type CategoriesOnConflict = {
+  constraint: CategoriesConstraint;
+  update_columns?: Array<CategoriesUpdateColumn>;
+  where?: Maybe<CategoriesBoolExp>;
+};
+
+/** Ordering options when selecting data from "categories". */
+export type CategoriesOrderBy = {
+  id?: Maybe<OrderBy>;
+  name?: Maybe<OrderBy>;
+};
+
+/** primary key columns input for table: categories */
+export type CategoriesPkColumnsInput = {
+  id: Scalars['Int'];
+};
+
+/** select columns of table "categories" */
+export enum CategoriesSelectColumn {
+  /** column name */
+  Id = 'id',
+  /** column name */
+  Name = 'name'
+}
+
+/** input type for updating data in table "categories" */
+export type CategoriesSetInput = {
+  id?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+};
+
+/** aggregate stddev on columns */
+export type CategoriesStddevFields = {
+  __typename?: 'categories_stddev_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate stddev_pop on columns */
+export type CategoriesStddevPopFields = {
+  __typename?: 'categories_stddev_pop_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate stddev_samp on columns */
+export type CategoriesStddevSampFields = {
+  __typename?: 'categories_stddev_samp_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate sum on columns */
+export type CategoriesSumFields = {
+  __typename?: 'categories_sum_fields';
+  id?: Maybe<Scalars['Int']>;
+};
+
+/** update columns of table "categories" */
+export enum CategoriesUpdateColumn {
+  /** column name */
+  Id = 'id',
+  /** column name */
+  Name = 'name'
+}
+
+/** aggregate var_pop on columns */
+export type CategoriesVarPopFields = {
+  __typename?: 'categories_var_pop_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate var_samp on columns */
+export type CategoriesVarSampFields = {
+  __typename?: 'categories_var_samp_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate variance on columns */
+export type CategoriesVarianceFields = {
+  __typename?: 'categories_variance_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
 /** mutation root */
 export type MutationRoot = {
   __typename?: 'mutation_root';
+  /** delete data from the table: "categories" */
+  delete_categories?: Maybe<CategoriesMutationResponse>;
+  /** delete single row from the table: "categories" */
+  delete_categories_by_pk?: Maybe<Categories>;
   /** delete data from the table: "tasks" */
   delete_tasks?: Maybe<TasksMutationResponse>;
   /** delete single row from the table: "tasks" */
   delete_tasks_by_pk?: Maybe<Tasks>;
+  /** insert data into the table: "categories" */
+  insert_categories?: Maybe<CategoriesMutationResponse>;
+  /** insert a single row into the table: "categories" */
+  insert_categories_one?: Maybe<Categories>;
   /** insert data into the table: "tasks" */
   insert_tasks?: Maybe<TasksMutationResponse>;
   /** insert a single row into the table: "tasks" */
   insert_tasks_one?: Maybe<Tasks>;
+  /** update data of the table: "categories" */
+  update_categories?: Maybe<CategoriesMutationResponse>;
+  /** update single row of the table: "categories" */
+  update_categories_by_pk?: Maybe<Categories>;
   /** update data of the table: "tasks" */
   update_tasks?: Maybe<TasksMutationResponse>;
   /** update single row of the table: "tasks" */
   update_tasks_by_pk?: Maybe<Tasks>;
+};
+
+
+/** mutation root */
+export type MutationRootDeleteCategoriesArgs = {
+  where: CategoriesBoolExp;
+};
+
+
+/** mutation root */
+export type MutationRootDeleteCategoriesByPkArgs = {
+  id: Scalars['Int'];
 };
 
 
@@ -105,6 +303,20 @@ export type MutationRootDeleteTasksByPkArgs = {
 
 
 /** mutation root */
+export type MutationRootInsertCategoriesArgs = {
+  objects: Array<CategoriesInsertInput>;
+  on_conflict?: Maybe<CategoriesOnConflict>;
+};
+
+
+/** mutation root */
+export type MutationRootInsertCategoriesOneArgs = {
+  object: CategoriesInsertInput;
+  on_conflict?: Maybe<CategoriesOnConflict>;
+};
+
+
+/** mutation root */
 export type MutationRootInsertTasksArgs = {
   objects: Array<TasksInsertInput>;
   on_conflict?: Maybe<TasksOnConflict>;
@@ -115,6 +327,22 @@ export type MutationRootInsertTasksArgs = {
 export type MutationRootInsertTasksOneArgs = {
   object: TasksInsertInput;
   on_conflict?: Maybe<TasksOnConflict>;
+};
+
+
+/** mutation root */
+export type MutationRootUpdateCategoriesArgs = {
+  _inc?: Maybe<CategoriesIncInput>;
+  _set?: Maybe<CategoriesSetInput>;
+  where: CategoriesBoolExp;
+};
+
+
+/** mutation root */
+export type MutationRootUpdateCategoriesByPkArgs = {
+  _inc?: Maybe<CategoriesIncInput>;
+  _set?: Maybe<CategoriesSetInput>;
+  pk_columns: CategoriesPkColumnsInput;
 };
 
 
@@ -151,12 +379,41 @@ export enum OrderBy {
 
 export type QueryRoot = {
   __typename?: 'query_root';
+  /** fetch data from the table: "categories" */
+  categories: Array<Categories>;
+  /** fetch aggregated fields from the table: "categories" */
+  categories_aggregate: CategoriesAggregate;
+  /** fetch data from the table: "categories" using primary key columns */
+  categories_by_pk?: Maybe<Categories>;
   /** fetch data from the table: "tasks" */
   tasks: Array<Tasks>;
   /** fetch aggregated fields from the table: "tasks" */
   tasks_aggregate: TasksAggregate;
   /** fetch data from the table: "tasks" using primary key columns */
   tasks_by_pk?: Maybe<Tasks>;
+};
+
+
+export type QueryRootCategoriesArgs = {
+  distinct_on?: Maybe<Array<CategoriesSelectColumn>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<CategoriesOrderBy>>;
+  where?: Maybe<CategoriesBoolExp>;
+};
+
+
+export type QueryRootCategoriesAggregateArgs = {
+  distinct_on?: Maybe<Array<CategoriesSelectColumn>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<CategoriesOrderBy>>;
+  where?: Maybe<CategoriesBoolExp>;
+};
+
+
+export type QueryRootCategoriesByPkArgs = {
+  id: Scalars['Int'];
 };
 
 
@@ -184,12 +441,41 @@ export type QueryRootTasksByPkArgs = {
 
 export type SubscriptionRoot = {
   __typename?: 'subscription_root';
+  /** fetch data from the table: "categories" */
+  categories: Array<Categories>;
+  /** fetch aggregated fields from the table: "categories" */
+  categories_aggregate: CategoriesAggregate;
+  /** fetch data from the table: "categories" using primary key columns */
+  categories_by_pk?: Maybe<Categories>;
   /** fetch data from the table: "tasks" */
   tasks: Array<Tasks>;
   /** fetch aggregated fields from the table: "tasks" */
   tasks_aggregate: TasksAggregate;
   /** fetch data from the table: "tasks" using primary key columns */
   tasks_by_pk?: Maybe<Tasks>;
+};
+
+
+export type SubscriptionRootCategoriesArgs = {
+  distinct_on?: Maybe<Array<CategoriesSelectColumn>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<CategoriesOrderBy>>;
+  where?: Maybe<CategoriesBoolExp>;
+};
+
+
+export type SubscriptionRootCategoriesAggregateArgs = {
+  distinct_on?: Maybe<Array<CategoriesSelectColumn>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<CategoriesOrderBy>>;
+  where?: Maybe<CategoriesBoolExp>;
+};
+
+
+export type SubscriptionRootCategoriesByPkArgs = {
+  id: Scalars['Int'];
 };
 
 
@@ -398,13 +684,13 @@ export type TasksVarianceFields = {
   id?: Maybe<Scalars['Float']>;
 };
 
-export type UpdateTaskMutationMutationVariables = Exact<{
+export type UpdateTaskMutationVariables = Exact<{
   id: Scalars['Int'];
   isDone?: Maybe<Scalars['Boolean']>;
 }>;
 
 
-export type UpdateTaskMutationMutation = (
+export type UpdateTaskMutation = (
   { __typename?: 'mutation_root' }
   & { update_tasks_by_pk?: Maybe<(
     { __typename?: 'tasks' }
@@ -413,37 +699,37 @@ export type UpdateTaskMutationMutation = (
 );
 
 
-export const UpdateTaskMutationDocument = gql`
-    mutation UpdateTaskMutation($id: Int!, $isDone: Boolean) {
+export const UpdateTaskDocument = gql`
+    mutation UpdateTask($id: Int!, $isDone: Boolean) {
   update_tasks_by_pk(pk_columns: {id: $id}, _set: {isDone: $isDone}) {
     isDone
   }
 }
     `;
-export type UpdateTaskMutationMutationFn = Apollo.MutationFunction<UpdateTaskMutationMutation, UpdateTaskMutationMutationVariables>;
+export type UpdateTaskMutationFn = Apollo.MutationFunction<UpdateTaskMutation, UpdateTaskMutationVariables>;
 
 /**
- * __useUpdateTaskMutationMutation__
+ * __useUpdateTaskMutation__
  *
- * To run a mutation, you first call `useUpdateTaskMutationMutation` within a React component and pass it any options that fit your needs.
- * When your component renders, `useUpdateTaskMutationMutation` returns a tuple that includes:
+ * To run a mutation, you first call `useUpdateTaskMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateTaskMutation` returns a tuple that includes:
  * - A mutate function that you can call at any time to execute the mutation
  * - An object with fields that represent the current status of the mutation's execution
  *
  * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
  *
  * @example
- * const [updateTaskMutationMutation, { data, loading, error }] = useUpdateTaskMutationMutation({
+ * const [updateTaskMutation, { data, loading, error }] = useUpdateTaskMutation({
  *   variables: {
  *      id: // value for 'id'
  *      isDone: // value for 'isDone'
  *   },
  * });
  */
-export function useUpdateTaskMutationMutation(baseOptions?: Apollo.MutationHookOptions<UpdateTaskMutationMutation, UpdateTaskMutationMutationVariables>) {
+export function useUpdateTaskMutation(baseOptions?: Apollo.MutationHookOptions<UpdateTaskMutation, UpdateTaskMutationVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useMutation<UpdateTaskMutationMutation, UpdateTaskMutationMutationVariables>(UpdateTaskMutationDocument, options);
+        return Apollo.useMutation<UpdateTaskMutation, UpdateTaskMutationVariables>(UpdateTaskDocument, options);
       }
-export type UpdateTaskMutationMutationHookResult = ReturnType<typeof useUpdateTaskMutationMutation>;
-export type UpdateTaskMutationMutationResult = Apollo.MutationResult<UpdateTaskMutationMutation>;
-export type UpdateTaskMutationMutationOptions = Apollo.BaseMutationOptions<UpdateTaskMutationMutation, UpdateTaskMutationMutationVariables>;
+export type UpdateTaskMutationHookResult = ReturnType<typeof useUpdateTaskMutation>;
+export type UpdateTaskMutationResult = Apollo.MutationResult<UpdateTaskMutation>;
+export type UpdateTaskMutationOptions = Apollo.BaseMutationOptions<UpdateTaskMutation, UpdateTaskMutationVariables>;

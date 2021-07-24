@@ -1,5 +1,5 @@
 import { Checkbox } from '@/components/atoms/checkbox';
-import { Tasks as ITask, useUpdateTaskMutationMutation } from 'src/graphql/types';
+import { Tasks as ITask, useUpdateTaskMutation } from 'src/graphql/types';
 import style from './style.module.scss';
 import { useState } from 'react';
 
@@ -11,7 +11,7 @@ export const TaskItem: React.VFC<Props> = ({
   task
 }) => {
   const [isDone, setIsDone] = useState<boolean>(task.isDone)
-  const [updateTaskMutationMutation, { error }] = useUpdateTaskMutationMutation({
+  const [updateTaskMutation, { error }] = useUpdateTaskMutation({
     variables: {
        id: task.id,
        isDone: isDone
@@ -20,7 +20,7 @@ export const TaskItem: React.VFC<Props> = ({
   // TODO: useCallback使うべきか調査
   const handleChange = (isDone: boolean) => {
     setIsDone(isDone);
-    updateTaskMutationMutation(); // mutation発行
+    updateTaskMutation(); // mutation発行
   }
 
   if (error) {
