@@ -1,3 +1,11 @@
+# Query
+query FetchCategories {
+  categories {
+    id
+    name
+  }
+}
+
 # Mutation
 mutation UpdateTask($id: Int!, $isDone: Boolean) {
   update_tasks_by_pk(pk_columns: { id: $id }, _set: { isDone: $isDone }) {

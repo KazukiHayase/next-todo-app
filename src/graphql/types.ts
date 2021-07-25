@@ -684,6 +684,17 @@ export type TasksVarianceFields = {
   id?: Maybe<Scalars['Float']>;
 };
 
+export type FetchCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type FetchCategoriesQuery = (
+  { __typename?: 'query_root' }
+  & { categories: Array<(
+    { __typename?: 'categories' }
+    & Pick<Categories, 'id' | 'name'>
+  )> }
+);
+
 export type UpdateTaskMutationVariables = Exact<{
   id: Scalars['Int'];
   isDone?: Maybe<Scalars['Boolean']>;
@@ -699,6 +710,41 @@ export type UpdateTaskMutation = (
 );
 
 
+export const FetchCategoriesDocument = gql`
+    query FetchCategories {
+  categories {
+    id
+    name
+  }
+}
+    `;
+
+/**
+ * __useFetchCategoriesQuery__
+ *
+ * To run a query within a React component, call `useFetchCategoriesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFetchCategoriesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFetchCategoriesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useFetchCategoriesQuery(baseOptions?: Apollo.QueryHookOptions<FetchCategoriesQuery, FetchCategoriesQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<FetchCategoriesQuery, FetchCategoriesQueryVariables>(FetchCategoriesDocument, options);
+      }
+export function useFetchCategoriesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<FetchCategoriesQuery, FetchCategoriesQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<FetchCategoriesQuery, FetchCategoriesQueryVariables>(FetchCategoriesDocument, options);
+        }
+export type FetchCategoriesQueryHookResult = ReturnType<typeof useFetchCategoriesQuery>;
+export type FetchCategoriesLazyQueryHookResult = ReturnType<typeof useFetchCategoriesLazyQuery>;
+export type FetchCategoriesQueryResult = Apollo.QueryResult<FetchCategoriesQuery, FetchCategoriesQueryVariables>;
 export const UpdateTaskDocument = gql`
     mutation UpdateTask($id: Int!, $isDone: Boolean) {
   update_tasks_by_pk(pk_columns: {id: $id}, _set: {isDone: $isDone}) {
