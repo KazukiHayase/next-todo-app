@@ -1,4 +1,5 @@
 import { MockedProvider } from '@apollo/client/testing';
+import '../src/style/globals.scss'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
