@@ -17,7 +17,7 @@ export const Sidebar: React.VFC = () => {
           <li
             key={category.id}
             className={[
-              `${category.id}` === categoryId ? style.active : ''
+              String(category.id) === categoryId ? style.active : ''
             ].join(' ')}
           >
             <Link href={`/tasks/${category.id}`}>

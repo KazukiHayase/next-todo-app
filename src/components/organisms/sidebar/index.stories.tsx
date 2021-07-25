@@ -1,5 +1,6 @@
 import React, { ComponentProps, useCallback, useEffect, useState } from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
+import * as nextRouter from 'next/router'
 import { Sidebar } from './index';
 import { FetchCategoriesDocument } from 'src/graphql/types'
 
@@ -43,12 +44,5 @@ Default.parameters = {
         },
       },
     ],
-  },
-  nextRouter: {
-    path: "/",
-    asPath: "/",
-    query: {
-      categoryId: "1",
-    },
-  },
+  }
 };

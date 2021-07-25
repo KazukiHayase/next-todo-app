@@ -1966,7 +1966,7 @@
   "resolved" "https://registry.npmjs.org/@sindresorhus/is/-/is-0.14.0.tgz"
   "version" "0.14.0"
 
-"@storybook/addon-actions@^6.0.0", "@storybook/addon-actions@^6.3.4", "@storybook/addon-actions@6.3.4":
+"@storybook/addon-actions@^6.3.4", "@storybook/addon-actions@6.3.4":
   "integrity" "sha512-+fTTaWepSaMeMD96zsNap0AcFUu3xyGepIucNMvkpfJfQnyYzr7S0qyjpsW84DLKHPcjujNvOOi98y7cAKV6tw=="
   "resolved" "https://registry.npmjs.org/@storybook/addon-actions/-/addon-actions-6.3.4.tgz"
   "version" "6.3.4"
@@ -2144,7 +2144,7 @@
     "prop-types" "^15.7.2"
     "regenerator-runtime" "^0.13.7"
 
-"@storybook/addons@^6", "@storybook/addons@^6.0.0", "@storybook/addons@^6.3.0", "@storybook/addons@6.3.4":
+"@storybook/addons@^6", "@storybook/addons@^6.3.0", "@storybook/addons@6.3.4":
   "integrity" "sha512-rf8K8X3JrB43gq5nw5SYgfucQkFg2QgUMWdByf7dQ4MyIl5zet+2MYiSXJ9lfbhGKJZ8orc81rmMtiocW4oBjg=="
   "resolved" "https://registry.npmjs.org/@storybook/addons/-/addons-6.3.4.tgz"
   "version" "6.3.4"
@@ -2345,7 +2345,7 @@
     "ts-dedent" "^2.0.0"
     "util-deprecate" "^1.0.2"
 
-"@storybook/client-api@^6.0.0", "@storybook/client-api@6.3.4":
+"@storybook/client-api@6.3.4":
   "integrity" "sha512-lOrfz8ic3+nHZzqIdNH2I7Q3Wp0kS/Ic0PD/3QKvI2f6iVIapIjjWW1xAuor80Dl7rMhOn8zxgXta+7G7Pn2yQ=="
   "resolved" "https://registry.npmjs.org/@storybook/client-api/-/client-api-6.3.4.tgz"
   "version" "6.3.4"
@@ -9562,7 +9562,7 @@
   "resolved" "https://registry.npmjs.org/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz"
   "version" "2.1.0"
 
-"next@^9.0.0 || ^10.0.0 || ^11.0.0", "next@>=10.2.0", "next@11.0.1":
+"next@>=10.2.0", "next@11.0.1":
   "integrity" "sha512-yR7be7asNbvpVNpi6xxEg28wZ7Gqmj1nOt0sABH9qORmF3+pms2KZ7Cng33oK5nqPIzEEFJD0pp2PCe3/ueMIg=="
   "resolved" "https://registry.npmjs.org/next/-/next-11.0.1.tgz"
   "version" "11.0.1"
@@ -12403,11 +12403,6 @@
   optionalDependencies:
     "@apollo/client" ">=2.0.0"
     "@apollo/react-testing" ">=3.0.0"
-
-"storybook-addon-next-router@^3.0.5":
-  "integrity" "sha512-GgXhKRBh6nAFhQu9mtaupgdBizD57Ld42o3MFUrs6y1pKEq0/FTSy585o7u46gdEYx1IH8X48dl4qy3iBcwl8w=="
-  "resolved" "https://registry.npmjs.org/storybook-addon-next-router/-/storybook-addon-next-router-3.0.5.tgz"
-  "version" "3.0.5"
 
 "storybook-addon-outline@^1.4.1":
   "integrity" "sha512-Qvv9X86CoONbi+kYY78zQcTGmCgFaewYnOVR6WL7aOFJoW7TrLiIc/O4hH5X9PsEPZFqjfXEPUPENWVUQim6yw=="

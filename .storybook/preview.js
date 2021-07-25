@@ -1,5 +1,5 @@
 import { MockedProvider } from '@apollo/client/testing';
-import { RouterContext } from "next/dist/next-server/lib/router-context";
+import * as nextRouter from 'next/router'
 import '../src/style/globals.scss'
 
 export const parameters = {
@@ -12,8 +12,15 @@ export const parameters = {
   },
   apolloClient: {
     MockedProvider
-  },
-  nextRouter: {
-    Provider: RouterContext.Provider,
   }
 }
+
+nextRouter.useRouter = () => ({
+  route: "/",
+  pathname: "/",
+  query: { categoryId: "1" },
+  asPath: "",
+  basePath: "",
+  push: () => {},
+  prefetch: () => new Promise((resolve, reject) => {}),
+})

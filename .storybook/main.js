@@ -7,10 +7,9 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "storybook-addon-next-router",
     "storybook-addon-apollo-client"
   ],
-  // See also: https://github.com/storybookjs/storybook/issues/2320
+  // @see: https://github.com/storybookjs/storybook/issues/2320
   webpackFinal: async (config, { mode }) => {
     // 絶対パス、パスエイリアスを解決できるように
     // @see: https://github.com/storybookjs/storybook/issues/3916#issuecomment-664349094
