@@ -23,4 +23,4 @@ for (let i = 0; i < 3; i++) {
 }
 
 export const Default = Template.bind({});
-Default.args = {tasks: tasks};
+Default.args = {tasks: tasks, categoryName: '適当なタスクです'};

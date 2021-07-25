@@ -17,6 +17,6 @@ export default function Home() {
   }
 
   return (
-    <TaskList tasks={ tasks } />
+    <TaskList tasks={ tasks } categoryName="一時的なタスク" />
   )
 }
