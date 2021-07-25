@@ -4,6 +4,17 @@ import * as nextRouter from 'next/router'
 import { Sidebar } from './index';
 import { FetchCategoriesDocument } from 'src/graphql/types'
 
+// デフォルトのやつを上書き
+(nextRouter as any).useRouter = () => ({
+  route: "/",
+  pathname: "/",
+  query: { categoryId: "1" },
+  asPath: "",
+  basePath: "",
+  push: () => {},
+  prefetch: () => new Promise((resolve, reject) => {}),
+});
+
 export default {
   title: 'Organisms/Sidebar',
   component: Sidebar

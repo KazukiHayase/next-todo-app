@@ -1,5 +1,5 @@
 import { MockedProvider } from '@apollo/client/testing';
-import * as nextRouter from 'next/router'
+import router from './routerMock'
 import '../src/style/globals.scss'
 
 export const parameters = {
@@ -14,13 +14,3 @@ export const parameters = {
     MockedProvider
   }
 }
-
-nextRouter.useRouter = () => ({
-  route: "/",
-  pathname: "/",
-  query: { categoryId: "1" },
-  asPath: "",
-  basePath: "",
-  push: () => {},
-  prefetch: () => new Promise((resolve, reject) => {}),
-})
