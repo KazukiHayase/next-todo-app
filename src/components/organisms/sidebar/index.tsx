@@ -1,7 +1,7 @@
 import React from "react"
 import Link from 'next/link'
 import { useFetchCategoriesQuery } from "src/graphql/types";
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import style from './style.module.scss'
 
 

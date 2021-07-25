@@ -44,4 +44,11 @@ Default.parameters = {
       },
     ],
   },
+  nextRouter: {
+    path: "/",
+    asPath: "/",
+    query: {
+      categoryId: "1",
+    },
+  },
 };

@@ -1,4 +1,5 @@
 import { MockedProvider } from '@apollo/client/testing';
+import { RouterContext } from "next/dist/next-server/lib/router-context";
 import '../src/style/globals.scss'
 
 export const parameters = {
@@ -11,5 +12,8 @@ export const parameters = {
   },
   apolloClient: {
     MockedProvider
+  },
+  nextRouter: {
+    Provider: RouterContext.Provider,
   }
 }

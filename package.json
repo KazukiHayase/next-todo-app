@@ -16,7 +16,8 @@
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "^1.35.2"
+    "sass": "^1.35.2",
+    "storybook-addon-next-router": "^3.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -33,6 +34,7 @@
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1",
     "storybook-addon-apollo-client": "^4.0.8",
+    "tslib": "^2.3.0",
     "typescript": "4.3.5"
   }
 }
